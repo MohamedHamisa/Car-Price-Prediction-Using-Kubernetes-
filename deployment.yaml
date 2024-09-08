@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: car-price-predictor
-        image: your-dockerhub-username/car-price-predictor:latest
+        image: mohamedhamisa556/car-price-predictor:latest
         ports:
         - containerPort: 8000
