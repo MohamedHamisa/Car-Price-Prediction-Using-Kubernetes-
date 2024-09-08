@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: car-price-predictor
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: car-price-predictor
+  template:
+    metadata:
+      labels:
+        app: car-price-predictor
+    spec:
+      containers:
+      - name: car-price-predictor
+        image: your-dockerhub-username/car-price-predictor:latest
+        ports:
+        - containerPort: 8000
