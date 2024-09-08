@@ -29,8 +29,4 @@ car-price-prediction/
 │   ├── deployment.yaml            # Kubernetes deployment file
 │   └── service.yaml               # Kubernetes service file
 │
-├── notebooks/                     # Jupyter notebooks for EDA and modeling
-│   └── EDA_and_Modeling.ipynb     # EDA and model training notebook
-│
 ├── README.md                      # Project overview and setup instructions
-└── .gitignore                     # Files to ignore in Git
