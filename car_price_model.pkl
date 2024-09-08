@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+import joblib
+import numpy as np
+
+# Initialize FastAPI
+app = FastAPI()
+
+# Load the trained model
+model = joblib.load('car_price_model.pkl')
+
+@app.post("/predict/")
+def predict_price(features: dict):
+    # Convert the input features to a NumPy array and scale them
+    input_features = np.array(list(features.values())).reshape(1, -1)
+    prediction = model.predict(input_features)
+    return {"predicted_price": np.expm1(prediction[0])}  # Inverse log transformation
+
+# Save this as app.py
+car_price_model.pkl
