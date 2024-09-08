@@ -1,24 +1,36 @@
-# Car-Price-Prediction-Using-Kubernetes-
+# Car Price Prediction using Machine Learning and Kubernetes
 
+## Overview
+This project aims to predict car prices using machine learning techniques and deploy the model as a REST API using FastAPI, Docker, and Kubernetes. The project includes the following steps:
+- Exploratory Data Analysis (EDA)
+- Data preprocessing and handling missing values
+- Model training and evaluation
+- API development to serve the predictions
+- Docker containerization
+- Kubernetes deployment
+
+## Project Structure
+
+```bash
 car-price-prediction/
 │
-├── app/                           # Folder containing FastAPI app
+├── app/                           # Contains FastAPI app
 │   ├── __init__.py
 │   ├── app.py                     # FastAPI API server
-│   └── model/                     # Folder for the serialized model
+│   └── model/                     # Contains the serialized model
 │       └── car_price_model.pkl     # Trained model
 │
 ├── data/                          # Folder containing datasets
 │   └── CarPrice_Assignment.csv     # Original car dataset
 │
-├── docker/                        # Folder for Docker and Kubernetes deployment files
+├── docker/                        # Docker and Kubernetes deployment files
 │   ├── Dockerfile                 # Dockerfile for building the app container
 │   ├── requirements.txt           # Python dependencies
 │   ├── deployment.yaml            # Kubernetes deployment file
 │   └── service.yaml               # Kubernetes service file
 │
-├── notebooks/                     # Folder for Jupyter notebooks
-│   └── EDA_and_Modeling.ipynb     # Jupyter notebook for EDA and model training
+├── notebooks/                     # Jupyter notebooks for EDA and modeling
+│   └── EDA_and_Modeling.ipynb     # EDA and model training notebook
 │
 ├── README.md                      # Project overview and setup instructions
-└── .gitignore                     # Files to ignore for Git
+└── .gitignore                     # Files to ignore in Git
